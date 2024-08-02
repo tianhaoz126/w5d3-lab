@@ -15,6 +15,10 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.getLists();
+  }
+
   getLists = () => {
     fetch("http://localhost:5000/posts")
       .then(res => res.json())
